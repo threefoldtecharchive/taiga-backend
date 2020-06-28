@@ -40,7 +40,7 @@ class UserValidator(validators.ModelValidator):
     class Meta:
         model = User
         fields = ("username", "full_name", "color", "bio", "lang",
-                  "theme", "timezone", "is_active")
+                  "theme", "timezone", "is_active", "github_username", "threebot_name", "public_key")
 
     def validate_username(self, attrs, source):
         value = attrs[source]

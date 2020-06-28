@@ -90,6 +90,18 @@ class UsersViewSet(ModelCrudViewSet):
         self.object_list = MembersFilterBackend().filter_queryset(request,
                                                                   self.get_queryset(),
                                                                   self)
+        if 'publickey' in request.QUERY_PARAMS:
+            publickey = request.QUERY_PARAMS['publickey']
+            self.object_list = self.object_list.filter(public_key=publickey)
+
+        if 'username' in request.QUERY_PARAMS:
+            self.object_list = self.object_list.filter(username=request.QUERY_PARAMS['username'])
+
+        if 'email' in request.QUERY_PARAMS:
+            self.object_list = self.object_list.filter(email=request.QUERY_PARAMS['email'])
+        
+        if 'threebot_name' in request.QUERY_PARAMS:
+            self.object_list = self.object_list.filter(email=request.QUERY_PARAMS['threebot_name'])
 
         page = self.paginate_queryset(self.object_list)
         if page is not None:
@@ -145,6 +157,22 @@ class UsersViewSet(ModelCrudViewSet):
                 }
             )
             email.send()
+
+        github_username = request.DATA.pop('github_username', None)
+        threebot_name = request.DATA.pop('threebot_name', None)
+        public_key = request.DATA.pop('public_key', None)
+
+        if github_username:
+            request.user.github_username = github_username
+            request.user.save(update_fields=["github_username"])
+        
+        if threebot_name:
+            request.user.threebot_name = threebot_name
+            request.user.save(update_fields=["threebot_name"])
+        
+        if public_key:
+            request.user.public_key = public_key
+            request.user.save(update_fields=["public_key"])
 
         return super().partial_update(request, *args, **kwargs)
 

@@ -39,6 +39,8 @@ DATABASES = {
     }
 }
 
+PRIVATE_KEY = "25p85axmtVLM8aGp+gYJz6y+AIAVEddb5szzwi+WsSg="
+THREEBOT_URL = "https://login.threefold.me"
 #SITES = {
 #    "api": {
 #       "scheme": "http",

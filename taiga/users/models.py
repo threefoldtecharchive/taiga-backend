@@ -187,7 +187,11 @@ class User(AbstractBaseUser, PermissionsMixin):
                                                           default=settings.MAX_MEMBERSHIPS_PUBLIC_PROJECTS,
                                                           verbose_name=_("max number of memberships for "
                                                                          "each owned public project"))
-
+    public_key = models.CharField(null=False, blank=True, default="", max_length=200, verbose_name=_("Public key"))
+    threebot_name = models.CharField(null=False, blank=True, default="", max_length=100, verbose_name=_("Threebot name"))
+    github_username = models.CharField(null=False, blank=True, default="", max_length=100, verbose_name=_("Github username"))
+    
+    
     _cached_memberships = None
     _cached_liked_ids = None
     _cached_watched_ids = None

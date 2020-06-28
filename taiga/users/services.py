@@ -620,7 +620,7 @@ def has_available_slot_for_new_project(owner, is_private, total_memberships):
 
 def render_profile(user, outfile):
     csv_data = StringIO()
-    fieldnames = ["username", "email", "full_name", "bio"]
+    fieldnames = ["username", "email", "full_name", "bio", "github_username", "threebot_name", "public_key"]
 
     writer = csv.DictWriter(csv_data, fieldnames=fieldnames)
     writer.writeheader()
