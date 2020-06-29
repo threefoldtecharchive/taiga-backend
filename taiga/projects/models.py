@@ -55,7 +55,7 @@ from taiga.timeline.service import build_project_namespace
 from . import choices
 
 from dateutil.relativedelta import relativedelta
-
+from taiga.users.models import Role
 
 def get_project_logo_file_path(instance, filename):
     return get_file_path(instance, filename, "project")
@@ -463,6 +463,11 @@ class Project(ProjectDefaults, TaggedMixin, TagsColorsMixin, models.Model):
     def add_watcher(self, user, notify_level=NotifyLevel.all):
         notify_policy = create_notify_policy_if_not_exists(self, user)
         set_notify_policy_level(notify_policy, notify_level)
+        
+        # add watchers as members
+        role = Role.objects.filter(slug='follower', project_id=self.pk).first()
+        membership = Membership(project=self, user=user, role=role)
+        membership.save()
 
     def remove_watcher(self, user):
         notify_policy = self.cached_notify_policy_for_user(user)
