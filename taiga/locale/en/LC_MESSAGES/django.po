@@ -372,7 +372,7 @@ msgstr ""
 
 #: taiga/base/templates/emails/hero-body-html.jinja:6
 msgid "You have been Taigatized"
-msgstr ""
+msgstr "You have been in Threefold Circles"
 
 #: taiga/base/templates/emails/hero-body-html.jinja:297
 #, python-format
@@ -413,7 +413,7 @@ msgstr ""
 
 #: taiga/base/templates/emails/updates-body-html.jinja:6
 msgid "[Taiga] Updates"
-msgstr ""
+msgstr "[Threefold Circles] updates"
 
 #: taiga/base/templates/emails/updates-body-html.jinja:359
 msgid "Updates"
@@ -827,7 +827,7 @@ msgstr ""
 #: taiga/importers/templates/emails/importer_import_error-subject.jinja:1
 #, python-format
 msgid "[Taiga] %(error_subject)s"
-msgstr ""
+msgstr "[Threefold Circles] %(error_subject)s"
 
 #: taiga/export_import/templates/emails/load_dump-body-html.jinja:4
 #, python-format
@@ -1048,6 +1048,8 @@ msgid ""
 "\n"
 "[Taiga] Feedback from %(full_name)s <%(email)s>\n"
 msgstr ""
+"\n"
+"[Threefold Circles] Feedback from %(full_name)s <%(email)s>\n"
 
 #: taiga/hooks/api.py:54
 #| msgid "The payload is not a valid json"
@@ -1893,6 +1895,8 @@ msgid ""
 "\n"
 "[Taiga] %(full_name)s has sent a message to the project %(project_name)s\n"
 msgstr ""
+"\n"
+"[Threefold Circles] %(full_name)s has sent a message to the project %(project_name)s\n"
 
 #: taiga/projects/custom_attributes/choices.py:32
 msgid "Text"
@@ -3229,6 +3233,13 @@ msgid ""
 "%(subject)s\">See user story</a>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Story updated on %(project)s</h1>\n"
+"    <p>Hello %(user)s, <br> %(changer)s has updated a story:</p>\n"
+"    <p><strong>#%(ref)s %(subject)s</strong></p>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"See Story #%(ref)s: "
+"%(subject)s\">See story</a>\n"
+"    "
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-change-body-text.jinja:3
 #, python-format
@@ -3247,6 +3258,14 @@ msgid ""
 "\n"
 "See user story at %(url)s\n"
 msgstr ""
+"\n"
+"story updated on %(project)s\n"
+"\n"
+"Hello %(user)s, %(changer)s has updated a story:\n"
+"\n"
+"#%(ref)s %(subject)s\n"
+"\n"
+"See story at %(url)s\n"
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-change-subject.jinja:1
 #, python-format
@@ -3277,6 +3296,14 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>New story created on %(project)s</h1>\n"
+"    <p>Hello %(user)s,<br />%(changer)s has created a new story:</p>\n"
+"    <p><strong>#%(ref)s %(subject)s</strong></p>\n"
+"    <a class=\"button\" href=\"%(url)s\" title=\"See Story #%(ref)s "
+"%(subject)s\">See story</a>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-create-body-text.jinja:1
 #, python-format
@@ -3301,6 +3328,17 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"New story created on %(project)s\n"
+"\n"
+"Hello %(user)s, %(changer)s has created a new story:\n"
+"\n"
+"#%(ref)s %(subject)s\n"
+"\n"
+"See story at %(url)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-create-subject.jinja:1
 #, python-format
@@ -3327,6 +3365,13 @@ msgid ""
 "    <p><small>%(signature)s</small></p>\n"
 "    "
 msgstr ""
+"\n"
+"    <h1>Story deleted on %(project)s</h1>\n"
+"    <p>Hello %(user)s,<br />%(changer)s has deleted a story:</p>\n"
+"    <p><strong>#%(ref)s %(subject)s</strong></p>\n"
+"    <p><small>%(signature)s</small></p>\n"
+"    "
+
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-delete-body-text.jinja:1
 #, python-format
@@ -3349,6 +3394,15 @@ msgid ""
 "---\n"
 "%(signature)s\n"
 msgstr ""
+"\n"
+"Story deleted on %(project)s\n"
+"\n"
+"Hello %(user)s, %(changer)s has deleted a story\n"
+"\n"
+"#%(ref)s %(subject)s\n"
+"\n"
+"---\n"
+"%(signature)s\n"
 
 #: taiga/projects/notifications/templates/emails/userstories/userstory-delete-subject.jinja:1
 #, python-format
@@ -3694,7 +3748,7 @@ msgstr ""
 
 #: taiga/projects/tasks/validators.py:85
 msgid "Invalid user story id."
-msgstr ""
+msgstr "Invalid story id."
 
 #: taiga/projects/tasks/validators.py:109
 msgid "Invalid task status id. The status must belong to the same project."
@@ -3702,7 +3756,7 @@ msgstr ""
 
 #: taiga/projects/tasks/validators.py:123
 msgid "Invalid user story id. The user story must belong to the same project."
-msgstr ""
+msgstr "Invalid story id. The story must belong to the same project."
 
 #: taiga/projects/tasks/validators.py:135
 msgid "Invalid milestone id. The milestone must belong to the same project."
@@ -3713,6 +3767,8 @@ msgid ""
 "Invalid task ids. All tasks must belong to the same project and, if it exists, "
 "to the same status, user story and/or milestone."
 msgstr ""
+"Invalid task ids. All tasks must belong to the same project and, if it exists, "
+"to the same status, story and/or milestone."
 
 #: taiga/projects/tasks/validators.py:186
 msgid "All the tasks must be from the same project"
@@ -3753,7 +3809,7 @@ msgstr ""
 
 #: taiga/projects/templates/emails/membership_invitation-body-html.jinja:24
 msgid "Accept your invitation to Taiga"
-msgstr ""
+msgstr "Accept your invitation to Threefold Circles"
 
 #: taiga/projects/templates/emails/membership_invitation-body-html.jinja:24
 msgid "Accept your invitation"
@@ -3807,7 +3863,7 @@ msgstr ""
 
 #: taiga/projects/templates/emails/membership_invitation-body-text.jinja:20
 msgid "Accept your invitation to Taiga following this link:"
-msgstr ""
+msgstr "Accept your invitation to Threefold Circles following this link:"
 
 #: taiga/projects/templates/emails/membership_invitation-subject.jinja:1
 #, python-format
@@ -3815,6 +3871,8 @@ msgid ""
 "\n"
 "[Taiga] Invitation to join to the project '%(project)s'\n"
 msgstr ""
+"\n"
+"[Threefold Circles] Invitation to join to the project '%(project)s'\n"
 
 #: taiga/projects/templates/emails/membership_notification-body-html.jinja:4
 #, python-format
@@ -3864,6 +3922,8 @@ msgid ""
 "\n"
 "[Taiga] Added to the project '%(project)s'\n"
 msgstr ""
+"\n"
+"[Threefold Circles] Added to the project '%(project)s'\n"
 
 #: taiga/projects/templates/emails/transfer_accept-body-html.jinja:4
 #, python-format
@@ -4042,6 +4102,10 @@ msgid ""
 "%(requester_name)s has requested to become the project owner of "
 "\"%(project_name)s\".\n"
 msgstr ""
+"\n"
+"Hi %(owner_name)s,\n"
+"%(requester_name)s has requested to become the circle owner of "
+"\"%(project_name)s\".\n"
 
 #: taiga/projects/templates/emails/transfer_request-body-text.jinja:6
 msgid ""
@@ -4049,10 +4113,13 @@ msgid ""
 "Please, go to your project settings if you would like to start the project "
 "transfer from the administration panel.\n"
 msgstr ""
+"\n"
+"Please, go to your circle settings if you would like to start the circle "
+"transfer from the administration panel.\n"
 
 #: taiga/projects/templates/emails/transfer_request-body-text.jinja:10
 msgid "Go to your project settings:"
-msgstr ""
+msgstr "Go to your circle settings:"
 
 #: taiga/projects/templates/emails/transfer_request-subject.jinja:1
 #, python-format
@@ -4060,6 +4127,8 @@ msgid ""
 "\n"
 "[%(project)s] Project ownership transfer request\n"
 msgstr ""
+"\n"
+"[%(project)s] circle ownership transfer request\n"
 
 #: taiga/projects/templates/emails/transfer_start-body-html.jinja:4
 #, python-format
@@ -4070,6 +4139,11 @@ msgid ""
 "would like you to become the new project owner.</p>\n"
 "    "
 msgstr ""
+"\n"
+"        <p>Hi %(receiver_name)s,</p>\n"
+"        <p>%(owner_name)s, the current circle owner at \"%(project_name)s\" "
+"would like you to become the new circle owner.</p>\n"
+"    "
 
 #: taiga/projects/templates/emails/transfer_start-body-html.jinja:10
 #, python-format
@@ -4095,6 +4169,10 @@ msgid ""
 "%(owner_name)s, the current project owner at \"%(project_name)s\" would like "
 "you to become the new project owner.\n"
 msgstr ""
+"\n"
+"Hi %(receiver_name)s,\n"
+"%(owner_name)s, the current circle owner at \"%(project_name)s\" would like "
+"you to become the new circle owner.\n"
 
 #: taiga/projects/templates/emails/transfer_start-body-text.jinja:6
 #, python-format
@@ -4665,19 +4743,19 @@ msgstr ""
 
 #: taiga/users/models.py:178
 msgid "max number of owned private projects"
-msgstr ""
+msgstr "max number of owned private circles"
 
 #: taiga/users/models.py:181
 msgid "max number of owned public projects"
-msgstr ""
+msgstr "max number of owned public circles"
 
 #: taiga/users/models.py:184
 msgid "max number of memberships for each owned private project"
-msgstr ""
+msgstr "max number of memberships for each owned private circle"
 
 #: taiga/users/models.py:188
 msgid "max number of memberships for each owned public project"
-msgstr ""
+msgstr "max number of memberships for each owned public circle"
 
 #: taiga/users/models.py:316
 msgid "permissions"
@@ -4735,7 +4813,7 @@ msgstr ""
 
 #: taiga/users/templates/emails/change_email-subject.jinja:1
 msgid "[Taiga] Change email"
-msgstr ""
+msgstr "[Threefold Circles] Change email"
 
 #: taiga/users/templates/emails/password_recovery-body-html.jinja:4
 #, python-format
@@ -4785,7 +4863,7 @@ msgstr ""
 
 #: taiga/users/templates/emails/password_recovery-subject.jinja:1
 msgid "[Taiga] Password recovery"
-msgstr ""
+msgstr "[Threefold Circles] Password recovery"
 
 #: taiga/users/templates/emails/registered_user-body-html.jinja:6
 #, python-format
@@ -4870,7 +4948,7 @@ msgstr ""
 
 #: taiga/users/templates/emails/registered_user-subject.jinja:1
 msgid "You've been Taigatized!"
-msgstr ""
+msgstr "You've been registered to Threefold circles!""
 
 #: taiga/users/validators.py:48
 msgid "invalid"
@@ -5013,3 +5091,11 @@ msgstr ""
 #~ msgstr ""
 #~ "\n"
 #~ "The Taiga Team\n"
+msgid "project"
+msgstr "circle"
+
+msgid "User Story"
+msgstr "Story"
+
+msgid "user story"
+msgstr "story"

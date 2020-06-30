@@ -18,15 +18,14 @@
 
 
 SR = {
-    "taigaio_url": "https://taiga.io",
+    "taigaio_url": "https://threefold.io",
     "social": {
-        "twitter_url": "https://twitter.com/taigaio",
-        "github_url": "https://github.com/taigaio",
+        "twitter_url": "https://twitter.com/threefold_fdn",
+        "github_url": "https://github.com/threefoldfoundation/threefoldtech",
     },
     "support": {
-        "url": "https://tree.taiga.io/support/",
-        "email": "support@taiga.io"
+        "url": "support.grid.tf",
     },
-    "signature": "The Taiga Team",
-    "product_name": "Taiga",
+    "signature": "The Threefold Circles Team",
+    "product_name": "Threefold Circles",
 }

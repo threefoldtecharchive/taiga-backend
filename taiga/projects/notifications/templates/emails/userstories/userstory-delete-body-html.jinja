@@ -2,8 +2,8 @@
 
 {% block body %}
     {% trans signature=sr("signature"), user=user.get_full_name(), changer=changer.get_full_name(), project=project.name, ref=snapshot.ref, subject=snapshot.subject %}
-    <h1>User Story deleted on {{ project }}</h1>
-    <p>Hello {{ user }},<br />{{ changer }} has deleted a user story:</p>
+    <h1>{{_("User Story")}} deleted on {{ project }}</h1>
+    <p>Hello {{ user }},<br />{{ changer }} has deleted a {{_("user story")}}:</p>
     <p><strong>#{{ ref }} {{ subject }}</strong></p>
     <p><small>{{ signature }}</small></p>
     {% endtrans %}

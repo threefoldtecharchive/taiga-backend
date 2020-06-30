@@ -6,8 +6,8 @@
 {% trans full_name=sender_full_name, project=membership.project, product_name=sr("product_name") %}
 You, or someone you know, has invited you to {{ product_name }}
 
-Hi! {{ full_name }} has sent you an invitation to join a project called {{ project }} in {{ product_name }}.
-Taiga is an Open Source Agile Project Management Tool. There is no cost for you to be a Taiga user.
+Hi! {{ full_name }} has sent you an invitation to join a {{_("project")}} called {{ project }} in {{ product_name }}.
+{{ _("Taiga") }} is an Open Source Agile Project Management Tool. There is no cost for you to be a Taiga user.
 
 {% endtrans %}
 {% if membership.invitation_extra_text %}
